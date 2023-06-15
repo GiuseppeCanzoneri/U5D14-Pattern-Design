@@ -1,4 +1,4 @@
-package giuseppecanzoneri.u5d14.runner;
+package giuseppecanzoneri.u5d14;
 
 import java.util.Calendar;
 import java.util.Date;
