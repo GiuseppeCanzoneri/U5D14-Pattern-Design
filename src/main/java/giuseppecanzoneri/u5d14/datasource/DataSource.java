@@ -1,5 +1,7 @@
 package giuseppecanzoneri.u5d14.datasource;
 
-public class DataSource {
+public interface DataSource {
+	public String getNomeCompleto();
 
+	public int getEta();
 }
