@@ -3,12 +3,18 @@ package giuseppecanzoneri.u5d14.main;
 import java.util.Calendar;
 import java.util.Date;
 
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
 import giuseppecanzoneri.u5d14.adapter.InfoAdapter;
 import giuseppecanzoneri.u5d14.client.UserData;
 import giuseppecanzoneri.u5d14.info.Info;
 
-public class Main {
-	public static void main(String[] args) {
+@Component
+public class AdapterRunner implements CommandLineRunner {
+
+	@Override
+	public void run(String... args) throws Exception {
 		// Creazione di un oggetto Info
 		Info info = new Info();
 		info.setNome("Giuseppe");
