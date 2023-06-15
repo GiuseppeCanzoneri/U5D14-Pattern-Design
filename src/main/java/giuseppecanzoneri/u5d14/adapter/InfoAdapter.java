@@ -1,5 +1,7 @@
 package giuseppecanzoneri.u5d14.adapter;
 
+import java.util.Calendar;
+
 import giuseppecanzoneri.u5d14.datasource.DataSource;
 import giuseppecanzoneri.u5d14.info.Info;
 
@@ -19,10 +21,11 @@ public class InfoAdapter implements DataSource {
 	public int getEta() {
 		// Calcola l'età a partire dalla data di nascita
 		// Implementazione semplificata per il calcolo dell'età
-		java.util.Calendar cal = java.util.Calendar.getInstance();
+
+		Calendar cal = Calendar.getInstance();
 		cal.setTime(info.getDataDiNascita());
-		int yearOfBirth = cal.get(java.util.Calendar.YEAR);
-		int currentYear = java.util.Calendar.getInstance().get(java.util.Calendar.YEAR);
+		int yearOfBirth = cal.get(Calendar.YEAR);
+		int currentYear = Calendar.getInstance().get(Calendar.YEAR);
 		return currentYear - yearOfBirth;
 	}
 }
